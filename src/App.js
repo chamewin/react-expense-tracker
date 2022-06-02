@@ -30,13 +30,17 @@ const App = () => {
 
   const addExpenseHandler = expense => {
     setExpenses((prevState) => {
-      return [expense, ...prevState]
-    })
+      return [expense, ...prevState];
+    });
   };
+
+  const onSelectYearHandler = () => {
+    
+  }
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
