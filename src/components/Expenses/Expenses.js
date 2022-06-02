@@ -12,7 +12,7 @@ const Expenses = (props) => {
   const filterSelectHandler = (selectedFilterYear) => {
     setFilterYear(selectedFilterYear);
     setFilteredExpenses(props.items.filter((item) => {
-      return item.date.getFullYear().toString() === selectedFilterYear ? true : false;
+      return item.date.getFullYear().toString() === selectedFilterYear;
     }));
   };
 
