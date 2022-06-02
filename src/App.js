@@ -34,10 +34,6 @@ const App = () => {
     });
   };
 
-  const onSelectYearHandler = () => {
-    
-  }
-
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
