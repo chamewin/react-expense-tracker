@@ -8,7 +8,7 @@ const ExpenseForm = (props) => {
   // const [enteredDate, setEnteredDate] = useState("");
   const [userInput, setUserInput] = useState({
     enteredTitle: '',
-    enteredAmount: '',
+    enteredAmount: 0.01,
     enteredDate: ''
   });
 
@@ -47,14 +47,14 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
+      amount: +userInput.enteredAmount,
       date: new Date(userInput.enteredDate)
     };
     props.onSaveExpenseData(expenseData);
     props.onHideForm();
     setUserInput({
       enteredTitle: '',
-      enteredAmount: '',
+      enteredAmount: 0.01,
       enteredDate: ''
     })
   };
